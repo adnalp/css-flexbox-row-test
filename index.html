@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>Flexbox Übung &copy; Adnan</title>
+
+    <style>
+        body{
+        margin:32px  50px;
+        padding:0;
+
+        background  :#f8f9fa; /* sehr helles grau */
+        }
+
+        main{
+        padding:16px;
+
+        background: white;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        /* hierhin getan weil die eigenschaften von button ansonsten nicht verändert werden */
+        *{
+        font-family:"Montserrat",sans-serif;
+        color:#2b2d42; /* fast schwarz */
+        }
+
+        button{
+        padding:10px 50px;
+        background:#e7c6ff;
+        border-radius:3px;
+        border:1px solid #c8b6ff;
+        cursor:pointer;
+        }
+
+        .products {
+            background:#bde0fe;
+            
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+
+            /*
+            main
+            */
+            display: flex;
+            flex-flow: row wrap;
+
+            gap: 16px;
+            padding: 16px;
+          
+        }
+
+
+        .product{
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  
+            border: 2px solid #023047;
+            padding: 16px;
+            border-radius: 3px;
+
+            /*child*/
+            flex-basis: 300px;
+            flex-grow: 1;
+
+     
+           
+        }
+
+        .product .product-image{
+            width:100%;
+            height: 200px;
+            object-fit: cover;
+
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+
+        
+        }
+
+        .product-title{
+            margin-bottom: 0;
+        }
+
+        .mini-desc {
+            font-size: small;
+            
+        }
+
+        .price{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .highlight-price{
+            color:#e76f51;
+        }
+
+        .cart-box{
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+
+
+            justify-content: center;
+            align-items: center;
+            
+            
+            gap: 10px;
+
+            margin-inline: auto;
+            
+        }
+
+        .increment,.decrement{
+            padding: 0;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+        }
+
+        .add-to-cart{
+           
+            display: flex;
+            flex-wrap: nowrap;
+
+            align-items: center;
+
+            gap: 10px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<main>
+    <!--Welcome-->
+    <h1>Flexbox Übung</h1>
+    <hr>
+
+    <p>
+        Sapien in lectus iaculis diam non dictum aptent, eleifend semper eros urna libero proin blandit quis, nunc et porta vestibulum velit eget. Fringilla conubia magnis maecenas suscipit vestibulum lacus sapien aliquam accumsan fermentum condimentum tincidunt, primis curae habitant ornare scelerisque iaculis quis pretium augue habitasse diam sodales, viverra praesent hendrerit blandit ligula euismod imperdiet rhoncus lectus litora posuere. Taciti himenaeos sodales quisque fusce sagittis arcu dis hac, cubilia nec metus commodo aliquam ante venenatis vestibulum montes, fringilla turpis platea proin habitant justo urna.
+    </p>
+    
+
+    <hr>
+
+    <h2>Produkte</h2>
+
+    <div class="products">
+
+        <!--Produkt-->
+        <div class="product">
+            <img class="product-image" src="img/product-image.jpg" alt="Produktbild">
+            <h4 class="product-title">
+                Produkttitel
+            </h4>
+
+            <span class="mini-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
+            <div class="price">
+                <span class="old-price">
+                    <del>79,90€</del>
+                </span>
+                <span class="highlight-price">
+                    59,90€
+                </span>
+                inkl. MwSt.
+            </div>
+            <div class="cart-box">
+                <button class="decrement">
+                    -
+                </button>
+                <div class="add-to-cart">
+                    <span class="counter">
+                        3
+                    </span>
+                    <button >
+                        In den Warenkorb
+                    </button>
+                </div>
+                <button class="increment">
+                    +
+                </button>
+            </div>
+        </div>
+        <!--Produkt-->
+        <div class="product">
+            <img class="product-image" src="img/product-image.jpg" alt="Produktbild">
+            <h4 class="product-title">
+                Produkttitel
+            </h4>
+
+            
+            <span class="mini-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
+
+            <div class="price">
+                <span class="old-price">
+                    <del>79,90€</del>
+                </span>
+                <span class="highlight-price">
+                    59,90€
+                </span>
+                inkl. MwSt.
+            </div>
+            <div class="cart-box">
+                <button class="decrement">
+                    -
+                </button>
+                <div class="add-to-cart">
+                    <span class="counter">
+                        3
+                    </span>
+                    <button >
+                        In den Warenkorb
+                    </button>
+                </div>
+                <button class="increment">
+                    +
+                </button>
+            </div>
+        </div>
+<!--Produkt-->
+<div class="product">
+    <img class="product-image" src="img/product-image.jpg" alt="Produktbild">
+    <h4 class="product-title">
+        Produkttitel
+    </h4>
+
+    <span class="mini-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
+    <div class="price">
+        <span class="old-price">
+            <del>79,90€</del>
+        </span>
+        <span class="highlight-price">
+            59,90€
+        </span>
+        inkl. MwSt.
+    </div>
+    <div class="cart-box">
+        <button class="decrement">
+            -
+        </button>
+        <div class="add-to-cart">
+            <span class="counter">
+                3
+            </span>
+            <button >
+                In den Warenkorb
+            </button>
+        </div>
+        <button class="increment">
+            +
+        </button>
+    </div>
+</div>
+<!--Produkt-->
+<div class="product">
+    <img class="product-image" src="img/product-image.jpg" alt="Produktbild">
+    <h4 class="product-title">
+        Produkttitel
+    </h4>
+
+    <span class="mini-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
+    <div class="price">
+        <span class="old-price">
+            <del>79,90€</del>
+        </span>
+        <span class="highlight-price">
+            59,90€
+        </span>
+        inkl. MwSt.
+    </div>
+    <div class="cart-box">
+        <button class="decrement">
+            -
+        </button>
+        <div class="add-to-cart">
+            <span class="counter">
+                3
+            </span>
+            <button >
+                In den Warenkorb
+            </button>
+        </div>
+        <button class="increment">
+            +
+        </button>
+    </div>
+</div>
+
+
+    </div>
+
+
+
+</main>
+
+</body>
+</html>
